@@ -16,7 +16,7 @@
 #define SERVERPORT 2020 // Sunucu Portu
 #define BUFSIZE 4096 // Tampon Boyutu
 #define SOCKETERROR (-1) // Socket Hatası
-#define SERVER_BACKLOG 10
+#define SERVER_BACKLOG 10 // Aynı Anda İş Yapma Limiti
 
 // Socket Değişken Tür Tanımlama
 typedef struct sockaddr_in SocketIn;

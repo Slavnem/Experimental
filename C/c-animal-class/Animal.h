@@ -41,25 +41,25 @@ animal_delete
     Animal** arg_animalptr
 );
 
-protected const char* const
+protected char* const
 getAnimalName // Adı Getir
 (
     const Animal* const arg_animalptr
 );
 
-protected const int
+protected int
 getAnimalAge // Yaşı Getir
 (
     const Animal* const arg_animalptr
 );
 
-protected const float
+protected float
 getAnimalWeight // Ağırlığı Getir
 (
     const Animal* const arg_animalptr
 );
 
-protected const char* const
+protected char* const
 getAnimalGender // Cinsiyeti Getir
 (
     const Animal* const arg_animalptr
@@ -79,7 +79,7 @@ setAnimalWeight // Ağırlık Ata
     const float arg_weight
 );
 
-protected const unsigned long int
+protected unsigned long int
 getAnimalCount // Hayvan Sayısını Getir
 (
     void

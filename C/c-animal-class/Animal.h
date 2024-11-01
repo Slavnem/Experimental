@@ -35,31 +35,31 @@ animal_create
     const boolean arg_animal_gender_male // erkek mi dişi mi
 );
 
-const boolean // Yıkıcı
+Animal* // Yıkıcı
 animal_delete
 (
     Animal** arg_animalptr
 );
 
-public const char* const
+protected const char* const
 getAnimalName // Adı Getir
 (
     const Animal* const arg_animalptr
 );
 
-public const int
+protected const int
 getAnimalAge // Yaşı Getir
 (
     const Animal* const arg_animalptr
 );
 
-public const float
+protected const float
 getAnimalWeight // Ağırlığı Getir
 (
     const Animal* const arg_animalptr
 );
 
-public const char* const
+protected const char* const
 getAnimalGender // Cinsiyeti Getir
 (
     const Animal* const arg_animalptr
@@ -79,13 +79,12 @@ setAnimalWeight // Ağırlık Ata
     const float arg_weight
 );
 
-public const unsigned long int
+protected const unsigned long int
 getAnimalCount // Hayvan Sayısını Getir
 (
     void
 );
 
-// PROTECTED
 protected void
 printAnimal // Hayvan Bilgisi Çıktı
 (

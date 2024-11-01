@@ -72,7 +72,7 @@ animal_create
     return animalptr;
 }
 
-const boolean // Yıkıcı
+Animal* // Yıkıcı
 animal_delete
 (
     Animal** arg_animalptr
@@ -94,10 +94,10 @@ animal_delete
 
     // başarıyla temizlendi
     setAnimalCount(FALSE); // hayvan sayısını 1 azalt
-    return TRUE;
+    return (*arg_animalptr); // işaretçiyi geri döndürsün
 }
 
-public const char* const
+protected const char* const
 getAnimalName // Adı Getir
 (
     const Animal* const arg_animalptr
@@ -106,7 +106,7 @@ getAnimalName // Adı Getir
     return arg_animalptr->name;
 }
 
-public const int
+protected const int
 getAnimalAge // Yaşı Getir
 (
     const Animal* const arg_animalptr
@@ -115,7 +115,7 @@ getAnimalAge // Yaşı Getir
     return arg_animalptr->age;
 }
 
-public const float
+protected const float
 getAnimalWeight // Ağırlığı Getir
 (
     const Animal* const arg_animalptr
@@ -124,7 +124,7 @@ getAnimalWeight // Ağırlığı Getir
     return arg_animalptr->weight;
 }
 
-public const char* const
+protected const char* const
 getAnimalGender // Cinsiyeti Getir
 (
     const Animal* const arg_animalptr
@@ -164,7 +164,7 @@ setAnimalWeight // Ağırlık Ata
     arg_animalptr->weight = arg_weight;
 }
 
-public const unsigned long int
+protected const unsigned long int
 getAnimalCount // Hayvan Sayısını Getir
 (
     void

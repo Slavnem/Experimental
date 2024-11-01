@@ -14,9 +14,12 @@ int main(void)
     Animal* dogptr = animal_create("Max", 4, 15.5, FALSE);
     printAnimal(dogptr);
 
-    animal_delete(&dogptr);
-    // printAnimal(dogptr); !ERROR!
+    // if not equal to Object (equal to NULL)
+    if(!animal_delete(&dogptr))
+        printf("Dogptr Successfully Deleted!\n\n");
 
+    // printAnimal(dogptr); !ERROR!
+    
     printAnimal(catptr);
     animal_delete(&catptr);
 

@@ -36,12 +36,6 @@ typedef struct Animal
 // Hayvan Miktar Sayacı
 private unsigned long int animal_counter = 0;
 
-// Fonksiyon Türü
-typedef char boolean;
-
-// Doğru yanlış kontrolü
-#define isTrue(x) (x > 0)
-
 // Fonksiyon Prototipler
 Animal* // Kurucu
 animal_create

@@ -82,13 +82,12 @@ animal_delete
     // bellek işaretçisini boş göstersin
     *arg_animalptr = (Animal*)NULL;
 
-    // temizlenmediyse false dönücek
-    if(*arg_animalptr != NULL)
-        return FALSE;
+    // temizlendiyse sayaçtan 1 azalacak
+    if(*arg_animalptr == NULL) // !*arg_animalptr
+        setAnimalCount(FALSE); // 1 azalt
 
-    // başarıyla temizlendi
-    setAnimalCount(FALSE); // hayvan sayısını 1 azalt
-    return (*arg_animalptr); // işaretçiyi geri döndürsün
+    // Null veya değil, işaretçiyi geri döndür
+    return *arg_animalptr;
 }
 
 protected char* const
